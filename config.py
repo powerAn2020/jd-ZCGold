@@ -8,7 +8,7 @@ REQUEST_TIMEOUT = 5  # 请求超时时间（秒）
 # 窗口配置
 WINDOW_WIDTH = 140
 WINDOW_HEIGHT = 140
-WINDOW_ALPHA = 0.6  # 透明度 70%
+WINDOW_ALPHA = 0.6  # 透明度 60%
 WINDOW_BG_COLOR = "#2b2b2b"  # 背景颜色
 
 # 颜色配置
