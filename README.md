@@ -2,6 +2,9 @@
 
 Windows下的置顶透明浮窗应用，实时显示京东浙商积存金价格。
 
+
+<img width="210" height="209" alt="image" src="https://github.com/user-attachments/assets/bce2d448-ae01-4533-8efe-32d167a7e845" />
+
 ## 功能特性
 
 ✨ **置顶浮窗** - 窗口始终保持在最前端  
