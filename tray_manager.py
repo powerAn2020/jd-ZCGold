@@ -25,7 +25,7 @@ class TrayManager:
         self.on_toggle_click_through = on_toggle_click_through
         self.icon = None
         self.window_visible = True
-        self.click_through_enabled = True
+        self.click_through_enabled = False
     
     def _create_icon_image(self) -> Image.Image:
         """

@@ -19,7 +19,7 @@ if (Test-Path "dist") { Remove-Item -Recurse -Force "dist" }
 if (Test-Path "浙商积存金价格监控.spec") { Remove-Item -Force "浙商积存金价格监控.spec" }
 
 Write-Host "[2/3] 开始打包..." -ForegroundColor Green
-pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=NONE main.py
+pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=icon.ico main.py
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""

@@ -31,8 +31,8 @@ class FloatingWindow:
         self._drag_start_x = 0
         self._drag_start_y = 0
         
-        # 鼠标穿透状态
-        self.click_through_enabled = True
+        # 鼠标穿透状态（默认不启用）
+        self.click_through_enabled = False
         
         # 创建UI元素
         self._create_widgets()
@@ -42,9 +42,6 @@ class FloatingWindow:
         
         # 绑定关闭事件
         self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
-        
-        # 启用鼠标穿透（需要在窗口创建后调用）
-        self.root.after(100, self._enable_click_through)
     
     def _create_widgets(self):
         """创建UI组件"""
@@ -236,7 +233,7 @@ class FloatingWindow:
             amt_value = float(change_amt)
             if amt_value > 0:
                 color = COLOR_UP
-                amt_text = f"+{change_amt}"
+                amt_text = change_amt if change_amt.startswith('+') else f"+{change_amt}"
             elif amt_value < 0:
                 color = COLOR_DOWN
                 amt_text = change_amt

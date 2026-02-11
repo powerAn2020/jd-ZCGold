@@ -20,7 +20,7 @@ if exist dist rmdir /s /q dist
 if exist "浙商积存金价格监控.spec" del "浙商积存金价格监控.spec"
 
 echo [2/3] 开始打包...
-pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=NONE main.py
+pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=icon.ico main.py
 
 if %errorlevel% equ 0 (
     echo.

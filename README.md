@@ -45,7 +45,7 @@ python main.py
 
 ```bash
 # 确保在虚拟环境中
-pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=NONE main.py
+pyinstaller --onefile --windowed --name="浙商积存金价格监控" --icon=icon.ico main.py
 ```
 
 打包后的exe文件位于 `dist` 目录下。
@@ -107,7 +107,6 @@ gold/
 - `Pillow`: 图像处理
 - `pywin32`: Windows API（鼠标穿透功能）
 - `pyinstaller`: 打包工具
-- `pywin32`: windows API
 
 ## 常见问题
 
@@ -123,6 +122,3 @@ A: 编辑 `config.py` 中的 `REFRESH_INTERVAL` 参数
 **Q: 打包后exe体积很大？**  
 A: 这是正常的，PyInstaller会打包Python解释器和所有依赖
 
-## 许可证
-
-MIT License
