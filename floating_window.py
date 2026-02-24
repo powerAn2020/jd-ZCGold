@@ -220,10 +220,6 @@ class FloatingWindow:
         if not data:
             return
         
-        # 更新价格
-        price = data.get('price', '--')
-        self.price_label.config(text=price)
-        
         # 更新涨跌额和涨跌幅（带颜色）
         change_amt = data.get('change_amt', '0')
         change_rate = data.get('change_rate', '0%')
@@ -246,7 +242,9 @@ class FloatingWindow:
         
         self.change_amt_label.config(text=amt_text, fg=color)
         self.change_rate_label.config(text=change_rate, fg=color)
-        
+         # 更新价格
+        price = data.get('price', '--')
+        self.price_label.config(text=price, fg=color)
         # 更新昨日价格
         yesterday = data.get('yesterday_price', '--')
         self.yesterday_label.config(text=yesterday)
